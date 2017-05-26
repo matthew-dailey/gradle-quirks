@@ -1,0 +1,16 @@
+diff --git a/build.gradle b/build.gradle
+index aafb6f2..8101984 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -1,8 +1,9 @@
+-// If you move this line inside allprojects, then the SystemTest classes will be ignored
+-apply plugin: 'groovy'
+ 
+ allprojects { Project project ->
+ 
++  // Now the test will be ignored, and 'gradle test' will pass
++  apply plugin: 'groovy'
++
+   repositories {
+     mavenCentral()
+   }
