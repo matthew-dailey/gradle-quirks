@@ -1,4 +1,4 @@
-// If you move this line inside allprojects, then the test will pass
+// If you move this line inside allprojects, then the SystemTest classes will be ignored
 apply plugin: 'groovy'
 
 allprojects { Project project ->
