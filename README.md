@@ -9,6 +9,41 @@ subprojects.
 
 Based on [a tweet](https://twitter.com/matthew_dailey1/status/867746998849589250) of mine.
 
+## Example run
+
+```
+$ gradle test
+...
+:system-tests:test
+
+org.matt.MattSystemTest > testIt FAILED
+    java.lang.AssertionError at MattSystemTest.groovy:10
+
+1 test completed, 1 failed
+:system-tests:test FAILED
+
+FAILURE: Build failed with an exception.
+
+...
+
+BUILD FAILED
+
+Total time: 1.516 secs
+```
+
+Now apply the patch and watch it work
+
+```
+$ git apply make-it-work.patch
+$ gradle test
+...
+:system-tests:test NO-SOURCE
+
+BUILD SUCCESSFUL
+
+Total time: 0.8 secs
+```
+
 ## Reproducibility
 
 ```
