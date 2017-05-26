@@ -1,6 +1,11 @@
+// If you move this line inside allprojects, then the test will pass
 apply plugin: 'groovy'
 
 allprojects { Project project ->
+
+  repositories {
+    mavenCentral()
+  }
 
   test {
     exclude '**/*SystemTest.class'
